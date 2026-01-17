@@ -1,0 +1,19 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G "Unix Makefiles" -S /mnt/c/Users/Daniel/CLionProjects/untitled -B /mnt/c/Users/Daniel/CLionProjects/untitled/cmake-build-debug
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenCV: /usr (found suitable version "4.10.0", minimum required is "4.10.0") found components: core imgcodecs imgproc highgui 
+CMake Error at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:230 (message):
+  Could NOT find OpenGL (missing: GLES3)
+Call Stack (most recent call first):
+  /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:594 (_FPHSA_FAILURE_MESSAGE)
+  /usr/share/cmake-3.22/Modules/FindOpenGL.cmake:443 (FIND_PACKAGE_HANDLE_STANDARD_ARGS)
+  /usr/local/lib/cmake/SmartSpectra/SmartSpectraConfig.cmake:34 (find_package)
+  CMakeLists.txt:9 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/mnt/c/Users/Daniel/CLionProjects/untitled/cmake-build-debug/CMakeFiles/CMakeOutput.log".
