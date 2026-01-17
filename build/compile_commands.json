@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/mnt/c/Users/Daniel/Desktop/Workspace/Presage-Template/build",
+  "command": "/usr/bin/c++  -isystem /usr/local/include/physiology -isystem /usr/local/include/physiology/interface -isystem /usr/include/opencv4 -std=gnu++17 -o CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o -c /mnt/c/Users/Daniel/Desktop/Workspace/Presage-Template/hello_vitals.cpp",
+  "file": "/mnt/c/Users/Daniel/Desktop/Workspace/Presage-Template/hello_vitals.cpp",
+  "output": "CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o"
+}
+]
