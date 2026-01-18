@@ -7,6 +7,13 @@ Description:
 Set a pathway to a video file of someone's face to extract and display vitals
 
 ** DONT FORGET TO REBUILD THE PROJECT AFTER UPDATING THIS FILE **
+
+rm -rf build
+cmake -S . -B build
+cmake --build build --config Release
+cmake --build build --config Debug
+cmake --build build
+./build/hello_vitals
 */
 
 #include <smartspectra/container/foreground_container.hpp>
@@ -35,6 +42,12 @@ int main(int argc, char** argv) {
     } else api_key = SMARTSPECTRA_API_KEY;
     std::cout << "Starting SmartSpectra Hello Vitals...\n";
 
+    // Load input JSON
+    std::ifstream input_file("data/input.json");
+    nlohmann::json input_json;
+    input_file >> input_json;
+    std::string video_path = input_json["video_path"];
+
     // Clear past output
     nlohmann::json out = {
         {"timestamp", nlohmann::json::array()},
@@ -56,7 +69,7 @@ int main(int argc, char** argv) {
 
         // settings.video_source.device_index = 0;
         settings.video_source.device_index = -1;
-        settings.video_source.input_video_path = "/mnt/d/Download/sample_vid.mp4"; // sample video
+        settings.video_source.input_video_path = video_path;
 
         // NOTE: If capture_width and/or capture_height is
         //     modified the HUD will also need to be changed

@@ -1,27 +1,30 @@
+# main.py
+# Author: Dan Shan
+# Date: 2024-01-17
+# Template to reference for using hello_vitals C++ code
 import json
+import subprocess
+import os
+from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data"
-BIN = ROOT / "cpp" / "build" / "hello_vitals"
+DATA_DIR = Path("data")
+DATA_DIR.mkdir(exist_ok=True)
 
-input_data = {
-    "session_id": "abc123",
-    "video_path": "/mnt/c/data/video.mp4",
-    "settings": {
-        "fps": 30,
-        "window": 10
-    }
-}
+# 1. Write input.json
+with open(DATA_DIR / "input.json", "w") as f:
+    json.dump(
+        {"video_path": "/mnt/d/Download/sample_vid2.mp4"},
+        f,
+        indent=4
+    )
 
-DATA.mkdir(exist_ok=True)
+# 2. Run C++ binary
+cmd = ["./build/hello_vitals"]
+subprocess.run(cmd, check=True)
 
-with open(DATA / "input.json", "w") as f:
-    json.dump(input_data, f)
+# 3. Read output.json
+with open(DATA_DIR / "output.json") as f:
+    output = json.load(f)
 
-result = subprocess.run(
-    [str(BIN), str(DATA / "input.json"), str(DATA / "output.json")],
-    check=True,
-    capture_output=True,
-    text=True
-)
-print("C++ stdout:", result.stdout)
+print("Pulse:", output["pulse"][:5])
+print("Breathing:", output["breathing"][:5])
