@@ -18,7 +18,6 @@ cmake --build build
 
 #include <smartspectra/container/foreground_container.hpp>
 #include <smartspectra/container/settings.hpp>
-#include <smartspectra/gui/opencv_hud.hpp>
 #include <physiology/modules/messages/metrics.h>
 #include <physiology/modules/messages/status.h>
 #include <glog/logging.h>
@@ -81,7 +80,7 @@ int main(int argc, char** argv) {
         settings.video_source.input_video_time_path = "";
 
         // Basic settings
-        settings.headless = false;
+        settings.headless = true;
         settings.enable_edge_metrics = true;
         settings.verbosity_level = 1;
 
@@ -93,18 +92,13 @@ int main(int argc, char** argv) {
 
         // Create container
         auto container = std::make_unique<container::CpuContinuousRestForegroundContainer>(settings);
-        auto hud = std::make_unique<gui::OpenCvHud>(
-            0, 0,
-            400,   // width = frame width
-            854    // height = frame height
-        );
 
         // Set up callbacks
         // NOTE: If code in callbacks adds more than 75ms of delay it might affect
         //       incoming data.
 
         auto status = container->SetOnCoreMetricsOutput(
-            [&hud, &out](const presage::physiology::MetricsBuffer& metrics, int64_t timestamp) {
+            [&out](const presage::physiology::MetricsBuffer& metrics, int64_t timestamp) {
                 out["timestamp"].push_back(timestamp);
                 if (!metrics.pulse().rate().empty()) {
                     out["pulse"].push_back(metrics.pulse().rate().rbegin()->value());
@@ -116,7 +110,6 @@ int main(int argc, char** argv) {
                 } else {
                     out["breathing"].push_back(nullptr);
                 }
-                hud->UpdateWithNewMetrics(metrics);
                 return absl::OkStatus();
             }
         );
@@ -126,15 +119,7 @@ int main(int argc, char** argv) {
         }
 
         status = container->SetOnVideoOutput(
-            [&hud](cv::Mat& frame, int64_t timestamp) {
-                if (auto render_status = hud->Render(frame); !render_status.ok()) { // Optional warning
-                   // std::cerr << "HUD render failed: " << render_status.message() << "\n";
-                }
-
-                char key = cv::waitKey(1) & 0xFF;
-                if (key == 'q' || key == 27) {
-                    return absl::CancelledError("User quit");
-                }
+            [](cv::Mat& frame, int64_t timestamp) {
                 return absl::OkStatus();
             }
         );
@@ -158,7 +143,7 @@ int main(int argc, char** argv) {
             std::cerr << "Failed to initialize: " << status.message() << "\n";
             return 1;
         }
-        std::cout << "Ready! Press 's' to start/stop recording data.\nPress 'q' to quit.\n";
+        std::cout << "Ready! Running in headless mode...\n";
         if (auto status = container->Run(); !status.ok()) {
             std::cerr << "Processing failed: " << status.message() << "\n";
             return 1;
@@ -170,7 +155,6 @@ int main(int argc, char** argv) {
             o.close();
         }
 
-        cv::destroyAllWindows();
         std::cout << "Done!\n";
         return 0;
     } catch (const std::exception& e) {

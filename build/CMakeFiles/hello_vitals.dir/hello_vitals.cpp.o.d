@@ -695,15 +695,6 @@ CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: \
  /usr/local/include/smartspectra/video_source/video_source.hpp \
  /usr/local/include/smartspectra/video_source/input_transformer.hpp \
  /usr/local/include/smartspectra/video_source/camera_tuner.hpp \
- /usr/local/include/smartspectra/gui/opencv_hud.hpp \
- /usr/local/include/physiology/modules/messages/metrics.pb.h \
- /usr/local/include/smartspectra/gui/opencv_trace_plotter.hpp \
- /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \
- /usr/include/c++/11/bits/this_thread_sleep.h \
- /usr/local/include/smartspectra/gui/opencv_value_indicator.hpp \
- /usr/include/opencv4/opencv2/imgproc.hpp \
- /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
- /usr/local/include/smartspectra/gui/opencv_label.hpp \
  /usr/include/opencv4/opencv2/opencv.hpp \
  /usr/include/opencv4/opencv2/calib3d.hpp \
  /usr/include/opencv4/opencv2/features2d.hpp \
@@ -757,6 +748,8 @@ CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: \
  /usr/include/opencv4/opencv2/highgui.hpp \
  /usr/include/opencv4/opencv2/imgcodecs.hpp \
  /usr/include/opencv4/opencv2/videoio.hpp \
+ /usr/include/opencv4/opencv2/imgproc.hpp \
+ /usr/include/opencv4/opencv2/imgproc/segmentation.hpp \
  /usr/include/opencv4/opencv2/ml.hpp \
  /usr/include/opencv4/opencv2/ml/ml.inl.hpp \
  /usr/include/opencv4/opencv2/objdetect.hpp \

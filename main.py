@@ -20,7 +20,7 @@ DATA_DIR.mkdir(exist_ok=True)
 # 1. Write to data/input.json
 with open(DATA_DIR / "input.json", "w") as f:
     json.dump(
-        {"video_path": "/mnt/d/Download/sample_vid1.mp4"}, # insert video path
+        {"video_path": "/root/Python-SmartSpectra-API/recordings/vid.mp4"}, # insert video path
         f,
         indent=4
     )
