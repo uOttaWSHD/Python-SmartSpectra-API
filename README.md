@@ -7,7 +7,7 @@ See the python reference code (main.py) for how to use.
 1. Python code stores the video locally
 2. Python code writes the video path to data/input.json
 3. Python builds and executes C++ file through the terminal
-4. C++ Code builds and executes
+4. C++ File builds and executes
    - Reads the video path from data/input.json
    - Calls SmartSpectra API on the video at the specified path
    - Writes breathing and pulse in BPM to terminal (not returned)
@@ -16,7 +16,7 @@ See the python reference code (main.py) for how to use.
        - Each key contains an array of the same size equal to the number of timestamps
        - Breathing and pulse may be null for some values but not timestamp
        - Breathing in (breaths / minute), pulse in (beats / minute)
-5. C++ Code ends
+5. Query finishes
 
 ## Installation
 
