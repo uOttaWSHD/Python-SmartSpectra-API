@@ -1,7 +1,14 @@
 # main.py
 # Author: Dan Shan
-# Date: 2024-01-17
+# Created: 2024-01-17
 # Template to reference for using hello_vitals C++ code
+# ** DON'T FORGET TO SET YOUR SMARTSPECTRA_API_KEY IN .env**
+# Build with WSL:
+# rm -rf build
+# cmake -S . -B build
+# cmake --build build --config Release
+# Run code with WSL:
+# python3 main.py
 import json
 import subprocess
 import os
