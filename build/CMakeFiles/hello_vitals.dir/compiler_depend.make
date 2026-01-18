@@ -52,6 +52,7 @@ CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: /mnt/c/Users/Daniel/Desktop/Work
   /usr/include/c++/11/bits/fs_fwd.h \
   /usr/include/c++/11/bits/fs_ops.h \
   /usr/include/c++/11/bits/fs_path.h \
+  /usr/include/c++/11/bits/fstream.tcc \
   /usr/include/c++/11/bits/functexcept.h \
   /usr/include/c++/11/bits/functional_hash.h \
   /usr/include/c++/11/bits/gslice.h \
@@ -172,6 +173,7 @@ CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: /mnt/c/Users/Daniel/Desktop/Work
   /usr/include/c++/11/ext/type_traits.h \
   /usr/include/c++/11/filesystem \
   /usr/include/c++/11/forward_list \
+  /usr/include/c++/11/fstream \
   /usr/include/c++/11/functional \
   /usr/include/c++/11/initializer_list \
   /usr/include/c++/11/iomanip \
@@ -445,8 +447,10 @@ CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: /mnt/c/Users/Daniel/Desktop/Work
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_base.h \
@@ -911,11 +915,7 @@ CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: /mnt/c/Users/Daniel/Desktop/Work
 
 /usr/local/include/physiology/interface/nlohmann/detail/macro_unscope.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/timex.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
-
-/usr/include/c++/11/bits/uniform_int_dist.h:
+/usr/local/include/physiology/interface/nlohmann/detail/json_pointer.hpp:
 
 /usr/include/opencv4/opencv2/flann/random.h:
 
@@ -964,8 +964,6 @@ CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: /mnt/c/Users/Daniel/Desktop/Work
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/include/opencv4/opencv2/video.hpp:
-
-/usr/include/opencv4/opencv2/stitching/warpers.hpp:
 
 /usr/include/opencv4/opencv2/stitching/detail/util.hpp:
 
@@ -1019,9 +1017,9 @@ CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: /mnt/c/Users/Daniel/Desktop/Work
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
-/usr/include/opencv4/opencv2/core/types.hpp:
-
 /usr/include/GLES3/gl32.h:
+
+/usr/include/opencv4/opencv2/core/types.hpp:
 
 /usr/local/include/mediapipe/gpu/gpu_shared_data_internal.h:
 
@@ -1038,6 +1036,10 @@ CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: /mnt/c/Users/Daniel/Desktop/Work
 /usr/include/opencv4/opencv2/flann/heap.h:
 
 /usr/include/c++/11/bits/erase_if.h:
+
+/usr/local/include/physiology/interface/nlohmann/detail/macro_scope.hpp:
+
+/usr/local/include/physiology/interface/absl/container/internal/inlined_vector.h:
 
 /usr/include/opencv4/opencv2/flann/general.h:
 
@@ -1266,6 +1268,10 @@ CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: /mnt/c/Users/Daniel/Desktop/Work
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
 /usr/include/c++/11/bits/shared_ptr_atomic.h:
+
+/usr/include/opencv4/opencv2/stitching/warpers.hpp:
+
+/usr/include/c++/11/bits/fstream.tcc:
 
 /usr/include/c++/11/bits/std_abs.h:
 
@@ -1647,9 +1653,9 @@ CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: /mnt/c/Users/Daniel/Desktop/Work
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
-/usr/include/opencv4/opencv2/flann/params.h:
-
 /usr/local/include/physiology/interface/nlohmann/detail/iterators/primitive_iterator.hpp:
+
+/usr/include/opencv4/opencv2/flann/params.h:
 
 /usr/include/c++/11/bits/stl_heap.h:
 
@@ -1668,6 +1674,18 @@ CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: /mnt/c/Users/Daniel/Desktop/Work
 /usr/local/include/mediapipe/framework/calculator_state.h:
 
 /usr/include/c++/11/cstdint:
+
+/usr/include/c++/11/tr1/exp_integral.tcc:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
+
+/usr/include/c++/11/set:
+
+/usr/local/include/mediapipe/framework/deps/ret_check.h:
+
+/usr/include/c++/11/bits/stl_iterator_base_types.h:
+
+/usr/local/include/mediapipe/framework/stream_handler.pb.h:
 
 /usr/include/c++/11/climits:
 
@@ -1759,6 +1777,10 @@ CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: /mnt/c/Users/Daniel/Desktop/Work
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
+/usr/include/c++/11/bits/uniform_int_dist.h:
+
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+
 /usr/include/c++/11/bits/unordered_set.h:
 
 /usr/include/opencv4/opencv2/dnn/dnn.hpp:
@@ -1786,6 +1808,8 @@ CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: /mnt/c/Users/Daniel/Desktop/Work
 /usr/include/opencv4/opencv2/core/check.hpp:
 
 /usr/include/c++/11/bits/vector.tcc:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h:
 
 /usr/local/include/physiology/interface/absl/base/internal/spinlock.h:
 
@@ -1861,6 +1885,18 @@ CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: /mnt/c/Users/Daniel/Desktop/Work
 
 /usr/local/include/physiology/interface/nlohmann/detail/iterators/iteration_proxy.hpp:
 
+/usr/include/c++/11/fstream:
+
+/usr/local/include/mediapipe/framework/deps/monotonic_clock.h:
+
+/usr/include/c++/11/bits/stl_tree.h:
+
+/usr/include/c++/11/limits:
+
+/usr/include/wctype.h:
+
+/usr/local/include/physiology/interface/absl/strings/internal/cordz_functions.h:
+
 /usr/include/stdint.h:
 
 /usr/local/include/physiology/interface/absl/strings/internal/cord_rep_crc.h:
@@ -1876,16 +1912,6 @@ CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: /mnt/c/Users/Daniel/Desktop/Work
 /usr/local/include/physiology/interface/absl/time/civil_time.h:
 
 /usr/include/c++/11/iosfwd:
-
-/usr/local/include/mediapipe/framework/deps/monotonic_clock.h:
-
-/usr/include/c++/11/bits/stl_tree.h:
-
-/usr/include/c++/11/limits:
-
-/usr/include/wctype.h:
-
-/usr/local/include/physiology/interface/absl/strings/internal/cordz_functions.h:
 
 /usr/include/c++/11/locale:
 
@@ -1915,17 +1941,7 @@ CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: /mnt/c/Users/Daniel/Desktop/Work
 
 /usr/include/c++/11/ostream:
 
-/usr/include/c++/11/tr1/exp_integral.tcc:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
-
-/usr/local/include/mediapipe/framework/deps/ret_check.h:
-
-/usr/include/c++/11/bits/stl_iterator_base_types.h:
-
-/usr/local/include/mediapipe/framework/stream_handler.pb.h:
-
-/usr/include/c++/11/set:
+/usr/include/x86_64-linux-gnu/bits/timex.h:
 
 /usr/include/opencv4/opencv2/core.hpp:
 
@@ -1982,6 +1998,8 @@ CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: /mnt/c/Users/Daniel/Desktop/Work
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h:
 
@@ -2576,9 +2594,3 @@ CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: /mnt/c/Users/Daniel/Desktop/Work
 /usr/local/include/mediapipe/framework/executor.h:
 
 /usr/local/include/physiology/interface/nlohmann/detail/iterators/internal_iterator.hpp:
-
-/usr/local/include/physiology/interface/nlohmann/detail/json_pointer.hpp:
-
-/usr/local/include/physiology/interface/absl/container/internal/inlined_vector.h:
-
-/usr/local/include/physiology/interface/nlohmann/detail/macro_scope.hpp:

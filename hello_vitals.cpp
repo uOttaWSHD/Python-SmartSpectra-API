@@ -5,6 +5,8 @@ Date: Jan 17, 2026
 
 Description:
 Set a pathway to a video file of someone's face to extract and display vitals
+
+** DONT FORGET TO REBUILD THE PROJECT AFTER UPDATING THIS FILE **
 */
 
 #include <smartspectra/container/foreground_container.hpp>
@@ -16,6 +18,8 @@ Set a pathway to a video file of someone's face to extract and display vitals
 #include <opencv2/opencv.hpp>
 #include <iostream>
 #include "dotenv.h"
+#include <nlohmann/json.hpp>
+#include <fstream>
 
 using namespace presage::smartspectra;
 
@@ -30,6 +34,16 @@ int main(int argc, char** argv) {
         api_key = argv[1];
     } else api_key = SMARTSPECTRA_API_KEY;
     std::cout << "Starting SmartSpectra Hello Vitals...\n";
+
+    // Clear past output
+    nlohmann::json out = {
+        {"timestamp", nlohmann::json::array()},
+        {"pulse", nlohmann::json::array()},
+        {"breathing", nlohmann::json::array()}
+    };
+    std::ofstream o("data/output.json", std::ofstream::trunc);
+    o << std::setw(4) << out << std::endl;
+    o.close();
 
     try {
         // Create settings
@@ -75,15 +89,19 @@ int main(int argc, char** argv) {
         // Set up callbacks
         // NOTE: If code in callbacks adds more than 75ms of delay it might affect
         //       incoming data.
+
         auto status = container->SetOnCoreMetricsOutput(
-            [&hud](const presage::physiology::MetricsBuffer& metrics, int64_t timestamp) {
-                float pulse;
-                float breathing;
-                if (!metrics.pulse().rate().empty()){
-                    std::cout << "Pulse: " << metrics.pulse().rate().rbegin()->value() << " beats / minute\n";
+            [&hud, &out](const presage::physiology::MetricsBuffer& metrics, int64_t timestamp) {
+                out["timestamp"].push_back(timestamp);
+                if (!metrics.pulse().rate().empty()) {
+                    out["pulse"].push_back(metrics.pulse().rate().rbegin()->value());
+                } else {
+                    out["pulse"].push_back(nullptr);
                 }
-                if (!metrics.breathing().rate().empty()){
-                    std::cout << "Breathing: " << metrics.pulse().rate().rbegin()->value() << " breaths / minute\n";
+                if (!metrics.breathing().rate().empty()) {
+                    out["breathing"].push_back(metrics.breathing().rate().rbegin()->value());
+                } else {
+                    out["breathing"].push_back(nullptr);
                 }
                 hud->UpdateWithNewMetrics(metrics);
                 return absl::OkStatus();
@@ -99,7 +117,6 @@ int main(int argc, char** argv) {
                 if (auto render_status = hud->Render(frame); !render_status.ok()) { // Optional warning
                    // std::cerr << "HUD render failed: " << render_status.message() << "\n";
                 }
-                // cv::imshow("SmartSpectra Hello Vitals", frame);
 
                 char key = cv::waitKey(1) & 0xFF;
                 if (key == 'q' || key == 27) {
@@ -133,6 +150,13 @@ int main(int argc, char** argv) {
             std::cerr << "Processing failed: " << status.message() << "\n";
             return 1;
         }
+        // Write output JSON
+        std::ofstream o("data/output.json", std::ofstream::trunc);
+        if (o.is_open()) {
+            o << std::setw(4) << out << std::endl;
+            o.close();
+        }
+
         cv::destroyAllWindows();
         std::cout << "Done!\n";
         return 0;
