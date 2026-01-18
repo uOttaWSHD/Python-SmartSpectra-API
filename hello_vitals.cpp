@@ -1,5 +1,11 @@
-// hello_vitals.cpp
-// SmartSpectra Hello Vitals - Minimal Example
+/*
+hello_vitals.cpp
+Author: Dan Shan
+Date: Jan 17, 2026
+
+Description:
+Set a pathway to a video file of someone's face to extract and display vitals
+*/
 
 #include <smartspectra/container/foreground_container.hpp>
 #include <smartspectra/container/settings.hpp>
