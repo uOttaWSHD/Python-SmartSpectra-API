@@ -1,6 +1,6 @@
 ## Presage SmartSpectra API - Python
 
-Indirect API queries with python
+Indirect API queries with python <br>
 See the python reference code (main.py) for how to use.
 
 ## How it works
@@ -63,6 +63,6 @@ Obtain your free API key from <https://physiology.presagetech.com>
 ./build/hello_vitals
 ```
 
-## Dates
-Created 2026, Jan 17
+## Key Dates
+Created 2026, Jan 17 <br>
 Last Updated 2026, Jan 18
