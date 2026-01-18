@@ -1,5 +1,5 @@
 CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: \
- /mnt/c/Users/Daniel/Desktop/Workspace/Presage-Template/hello_vitals.cpp \
+ /root/Python-SmartSpectra-API/hello_vitals.cpp \
  /usr/include/stdc-predef.h \
  /usr/local/include/smartspectra/container/foreground_container.hpp \
  /usr/local/include/physiology/modules/configuration.h \
@@ -790,8 +790,7 @@ CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o: \
  /usr/include/opencv4/opencv2/video.hpp \
  /usr/include/opencv4/opencv2/video/tracking.hpp \
  /usr/include/opencv4/opencv2/video/background_segm.hpp \
- /mnt/c/Users/Daniel/Desktop/Workspace/Presage-Template/dotenv.h \
- /usr/include/c++/11/fstream \
+ /root/Python-SmartSpectra-API/dotenv.h /usr/include/c++/11/fstream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc

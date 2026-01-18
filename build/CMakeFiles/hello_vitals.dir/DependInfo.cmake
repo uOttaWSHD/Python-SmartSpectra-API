@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/c/Users/Daniel/Desktop/Workspace/Presage-Template/hello_vitals.cpp" "CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o" "gcc" "CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o.d"
+  "/root/Python-SmartSpectra-API/hello_vitals.cpp" "CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o" "gcc" "CMakeFiles/hello_vitals.dir/hello_vitals.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

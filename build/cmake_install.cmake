@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/Users/Daniel/Desktop/Workspace/Presage-Template
+# Install script for directory: /root/Python-SmartSpectra-API
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/Users/Daniel/Desktop/Workspace/Presage-Template/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/root/Python-SmartSpectra-API/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

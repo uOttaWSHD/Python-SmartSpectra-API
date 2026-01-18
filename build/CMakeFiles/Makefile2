@@ -54,10 +54,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/Daniel/Desktop/Workspace/Presage-Template
+CMAKE_SOURCE_DIR = /root/Python-SmartSpectra-API
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/Daniel/Desktop/Workspace/Presage-Template/build
+CMAKE_BINARY_DIR = /root/Python-SmartSpectra-API/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/hello_vitals.dir/clean
 CMakeFiles/hello_vitals.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_vitals.dir/build.make CMakeFiles/hello_vitals.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_vitals.dir/build.make CMakeFiles/hello_vitals.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/Daniel/Desktop/Workspace/Presage-Template/build/CMakeFiles --progress-num=1,2 "Built target hello_vitals"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/root/Python-SmartSpectra-API/build/CMakeFiles --progress-num=1,2 "Built target hello_vitals"
 .PHONY : CMakeFiles/hello_vitals.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/hello_vitals.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Daniel/Desktop/Workspace/Presage-Template/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/Python-SmartSpectra-API/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/hello_vitals.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/Daniel/Desktop/Workspace/Presage-Template/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/Python-SmartSpectra-API/build/CMakeFiles 0
 .PHONY : CMakeFiles/hello_vitals.dir/rule
 
 # Convenience name for target.

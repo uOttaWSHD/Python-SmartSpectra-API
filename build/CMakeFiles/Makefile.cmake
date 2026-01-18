@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/mnt/c/Users/Daniel/Desktop/Workspace/Presage-Template/CMakeLists.txt"
+  "/root/Python-SmartSpectra-API/CMakeLists.txt"
   "CMakeFiles/3.27.0/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.27.0/CMakeSystem.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake"

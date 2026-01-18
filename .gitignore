@@ -1,1 +1,3 @@
 dotenv.h
+build/*
+node_modules
