@@ -2,7 +2,7 @@
 # Author: Dan Shan
 # Created: 2024-01-17
 # Template to reference for using hello_vitals C++ code
-# ** DON'T FORGET TO SET YOUR SMARTSPECTRA_API_KEY IN .env**
+# ** DON'T FORGET TO DEFINE YOUR SMARTSPECTRA_API_KEY IN dotenv.h**
 # Build with WSL:
 # rm -rf build
 # cmake -S . -B build
@@ -17,19 +17,19 @@ from pathlib import Path
 DATA_DIR = Path("data")
 DATA_DIR.mkdir(exist_ok=True)
 
-# 1. Write input.json
+# 1. Write to data/input.json
 with open(DATA_DIR / "input.json", "w") as f:
     json.dump(
-        {"video_path": "/mnt/d/Download/sample_vid2.mp4"},
+        {"video_path": "/mnt/d/Download/sample_vid1.mp4"}, # insert video path
         f,
         indent=4
     )
 
-# 2. Run C++ binary
+# 2. Build and execute C++ file
 cmd = ["./build/hello_vitals"]
 subprocess.run(cmd, check=True)
 
-# 3. Read output.json
+# 3. Read data/output.json
 with open(DATA_DIR / "output.json") as f:
     output = json.load(f)
 
