@@ -27,10 +27,15 @@ sudo curl -s --compressed -o /etc/apt/sources.list.d/presage-technologies.list "
 
 Install SDK (Ubuntu 22.04/Mint 21)
 
-```shell
+```sh
 sudo apt update
 sudo apt install libsmartspectra-dev=2.0.4
 ```
 
 #### Get API Key
 Obtain your free API key from <https://physiology.presagetech.com>
+
+Run in wsl terminal to build (and run code)
+```sh
+./build/hello_vitals
+```
